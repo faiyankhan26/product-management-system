@@ -1,0 +1,1 @@
+SELECT * FROM public.product ORDER BY id ASC

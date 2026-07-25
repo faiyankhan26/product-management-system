@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.top-bar input {
+    flex: 1;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    transition: .3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102,126,234,.3);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+#productForm button {
+    width: 100%;
+    background: #4CAF50;
+}
+
+#productForm button:hover {
+    background: #43a047;
+}
+
+#refreshBtn {
+    background: #2196F3;
+}
+
+#refreshBtn:hover {
+    background: #1976D2;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table thead {
+    background: #667eea;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+    background: #f4f4f4;
+}
+
+.edit-btn {
+    background: orange;
+    margin-right: 8px;
+}
+
+.edit-btn:hover {
+    background: darkorange;
+}
+
+.delete-btn {
+    background: crimson;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 420px;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    animation: popup .3s ease;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#updateBtn {
+    flex: 1;
+    background: #4CAF50;
+}
+
+#closeBtn {
+    flex: 1;
+    background: #e53935;
+}
+
+#updateBtn:hover {
+    background: #388E3C;
+}
+
+#closeBtn:hover {
+    background: #c62828;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media(max-width:900px){
+
+table{
+    display:block;
+    overflow-x:auto;
+}
+
+.top-bar{
+    flex-direction:column;
+}
+
+.modal-content{
+    width:90%;
+}
+
+}

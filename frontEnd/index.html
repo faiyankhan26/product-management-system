@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📦 Product Management Dashboard</h1>
+
+    <div class="top-bar">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search Product..."
+        >
+
+        <button id="refreshBtn">Refresh</button>
+
+    </div>
+
+    <!-- Add Product -->
+
+    <div class="card">
+
+        <h2>Add Product</h2>
+
+        <form id="productForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Product Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Description"
+                required
+            >
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Price"
+                step="0.01"
+                required
+            >
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity"
+                required
+            >
+
+            <button type="submit">
+                Add Product
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Product Table -->
+
+    <div class="card">
+
+        <h2>Products</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Description</th>
+
+                <th>Price</th>
+
+                <th>Quantity</th>
+
+                <th>Actions</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="productTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- Edit Modal -->
+
+<div class="modal" id="editModal">
+
+    <div class="modal-content">
+
+        <h2>Edit Product</h2>
+
+        <input type="hidden" id="editId">
+
+        <input
+            type="text"
+            id="editName"
+            placeholder="Name"
+        >
+
+        <input
+            type="text"
+            id="editDescription"
+            placeholder="Description"
+        >
+
+        <input
+            type="number"
+            id="editPrice"
+            placeholder="Price"
+        >
+
+        <input
+            type="number"
+            id="editQuantity"
+            placeholder="Quantity"
+        >
+
+        <div class="modal-buttons">
+
+            <button id="updateBtn">
+                Update
+            </button>
+
+            <button id="closeBtn">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
